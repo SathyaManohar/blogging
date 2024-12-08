@@ -12,7 +12,7 @@ const blogrouter=require("./routes/blog");
 const {blogmodelobj}=require("./models/blog");
 console.log("Env variables:",process.env.myname);
 // mongoose.connect("mongodb://127.0.0.1:27017/Myblog").then(()=>console.log("Mongodb Connected")).catch((error)=>console.log("MongoDb Cannot be connected",error));
- mongoose.connect(mongourl).then(()=>console.log("Mongodb Connected")).catch((error)=>console.log("MongoDb Cannot be connected",error));
+ mongoose.connect(process.env.mongourl).then(()=>console.log("Mongodb Connected")).catch((error)=>console.log("MongoDb Cannot be connected",error));
 app.set("view engine","ejs");
 app.set('views',path.resolve("./views"));
 
